@@ -1,0 +1,218 @@
+
+body {
+    padding: 50px;
+    line-height: 150%;
+    background-color: #fff;
+    background: url('assets/img/pandemic-icon.png') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      /*text-decoration-color: #ccc*/
+}
+
+.media-object {
+    width: 128px;
+    height: 128px;
+    border-radius: 5px;
+}
+
+.media .thumbnail {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.media-list {
+    text-align: left;
+}
+
+@media (min-width: 450px) and (max-width: 767px) {
+    .media-list {
+        text-align: left;
+    }
+    .media .thumbnail {
+        float: left;
+        margin-right: 25px;
+    }
+}
+
+.media:first-child {
+    margin-top: 15px;
+}
+
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+.btn-outline {
+    color: #818791;
+    background-color: transparent;
+    border-color: #818791;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+    color: #fff;
+    background-color: #818791;
+    border-color: #818791;
+}
+
+a {
+    color: #818791;
+}
+
+a:hover,
+a:focus {
+    color: #e5e5e5;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+    border-color: #818791;
+}
+
+@media (min-width: 768px) and (max-width: 911px) {
+    #search {
+        padding-left: 0px;
+    }
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+$red: Tomato;
+$palered: #FFE8E3;
+
+#input {
+width: 100%;
+border: 0px;
+color: blue
+border-bottom: solid black 2px;
+height:100%;
+font-size:70px;
+transition: all 0.2s;
+transition-timing-function: ease-in-out;
+}
+#input:focus {
+border-bottom-color: $red;
+border-width: 5px;
+outline: none;
+}
+#input:hover {
+border-bottom-color: $red;
+outline: none;
+}
+em {
+background-color: $red;
+color: #fff;
+}
+ul {
+list-style-type: none;
+border-bottom-width: 0px;
+padding:0px;
+color: darkgrey;
+}
+li {
+padding: 10px;
+transition: all 5s;
+transition-timing-function: ease-in-out;
+color: darkblue;
+}
+li:hover {
+/*background-color: Tomato;*/
+background-color: Tomato;
+}
+    
+/* Remove the jumbotron's default bottom margin */ 
+.jumbotron {
+    margin-bottom: 0;
+    }
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    }
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.SearchBar {
+     position: relative;
+     top: 100%;
+     left: 10%;
+}
+
+.SearchBar input {
+     height: 100%;
+     width: 60%;
+}

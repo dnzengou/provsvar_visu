@@ -1,0 +1,206 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+/*
+ * Page structure
+ */
+
+html, body {
+    margin: 0px 10px; padding:50px;
+}
+
+body {
+    background-color: transparent;
+    color: #CCC;
+    display: flex;
+    flex-direction: row;
+    font-family: Courier, monospace;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    /*flex: 1;*/
+    width: 60%;
+    margin: 0 auto;
+    /* creates 20% margins on either side */
+    }
+
+/* Tablet Landscape */
+
+@media screen and (max-width: 1060px) {
+
+    #primary { width:67%; }
+
+    #secondary { width:30%; margin-left:3%;}  
+
+}
+
+/* Tabled Portrait */
+
+@media screen and (max-width: 768px) {
+
+    #primary { width:100%; }
+
+    #secondary { width:100%; margin:0; border:none; }
+
+}
+
+@media (min-device-width:600px) {
+
+    img[data-src-600px] {
+
+        content: attr(data-src-600px, url);
+
+    }
+
+}
+
+@media (min-device-width:800px) {
+
+    img[data-src-800px] {
+
+        content: attr(data-src-800px, url);
+
+    }
+
+}
+  
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+
+.full-width {
+    /* 1/3 of 60% = the 20% margin on either side */
+    margin-left: -33.33%;
+    margin-right: -33.33%;
+    }
+
+.sidenav {
+  width: 230px;
+  position: fixed;
+  top:0;
+  bottom:0;
+  z-index: 1;
+  right: 10px;
+  background-color:rgb(192,192,192);opacity:0.6;
+  /*background: #eee;*/
+  overflow-x: hidden;
+  padding: 8px 0;
+  z-index:1;
+  border-radius:3px;
+}
+
+  #sketch {
+      position:fixed;
+      padding: 20px 20px;
+      top:0;
+      bottom:0;
+      right: 10px;
+      width:100%;
+      }
+
+canvas {
+    display: inline-block;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    text-align: center;
+}
+
+h1 {
+    color: seagreen;
+}
+
+h3 {
+    color: darkblue;
+}
+
+input {
+    width: 60px;
+}
+
+p {
+    text-align: center;
+    color: darkblue;
+}
+
+ul {
+list-style-type: none;
+border-bottom-width: 0px;
+padding:0px;
+color: darkgrey;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: darkblue;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button1 {
+    background-color: transparent; color: darkblue;
+  }
+
+
+
+.typewriter h1 {
+  color: darkgray;
+  font-family: monospace;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid green; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+
+/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+    }
+    
+/* Remove the jumbotron's default bottom margin */ 
+.jumbotron {
+    margin-bottom: 0;
+    }
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    }
