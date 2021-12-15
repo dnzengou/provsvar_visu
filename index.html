@@ -10,7 +10,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="assets/css/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      
+       <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
@@ -23,12 +28,20 @@
 </head>
 <!-- container -->
     
-<nav class="navbar navbar-default navbar-fixed-top"  style="font-family:Roboto; background-color:#fff;">
+<!--<nav class="navbar navbar-default navbar-fixed-top"  style="font-family:Roboto; background-color:#fff;">
   <div class="container">
   <h2 class="text-center">Patient test data table</h2>
-    <p class="text-center">Sökbar, filtrerbar, användarvänlig tabell för snabb sökning efter patient-ID per datum och relaterad bedömning från P-TSH, P-ASAT, P-ALAT testtestning.<p>
+    <p class="text-center" style="color:#000">Sökbar, filtrerbar, användarvänlig tabell för snabb sökning efter patient-ID per datum och relaterad bedömning från P-TSH, P-ASAT, P-ALAT provning.<p>
   </div>
-</nav>
+</nav>-->
+
+    <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" style="background-color:#fff">
+        <a href="#!" class="brand-logo" style="color:#000"></a>
+      </div>
+    </nav>
+  </div>
     
 <!--<div class="header" id="myHeader">
   <h2>Patient test data table</h2>
@@ -46,8 +59,8 @@
 
         <div id="table-container"></div>
   
-    <!--<p>COVID19 global map</p>-->
-    <p> Source:<i><a href="#"></i></p>
+    <!--<p></p>-->
+    <p> Source:<i><a href="#"></a></i>
 
     </div>
     </div>
@@ -55,25 +68,30 @@
 
 <footer id="footer">
   <ul class="text-center">
-            <p style="color:darkgrey">&copy; 2021 - Prosvar anonym</a><img src="assets/img/favicon/favicon-16x16.png"> - by <a href="desireyavro.com">desireyavro</a> with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i></p>.
+            <p style="color:darkgrey">&copy; 2021 - Prosvar anonym<img src="assets/img/favicon/favicon-16x16.png"> - by <a href="desireyavro.com">desireyavro</a> with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i></p>.
                 <code style="color:#ccc">Inspired by Derek Eder <a href="https://github.com/derekeder/csv-to-html-table">code </a> on github</code>.
-            </p>
   </ul>
   </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/jquery.csv.min.js"></script>
     <script src="assets/scripts/jquery.dataTables.min.js"></script>
     <script src="assets/scripts/dataTables.bootstrap.js"></script>
     <script src="assets/scripts/csv_to_html_table.js"></script>
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    
+    
+
+
+
     <script>
         init_table({
             csv_path: 'assets/data/provsvar_sept_anonym_122021-Blad11_mål.tsv',
-            /* data source: https://docs.google.com/spreadsheets/d/e/2PACX-1vR3adItsg2hhUehyNsKvr0X-ipi6HBw6pgp6ToNevHHgTYe8EuxENlmQehi1iVEEnrqPk_agdBNTLtU/pub?output=tsv*/
             element: 'table-container',
             allow_download: true,
             csv_options: {
@@ -81,7 +99,9 @@
                 delimiter: '"'
             },
             datatables_options: {
-                "paging": false
+                "paging": true,
+                "pagingType": "full_numbers",
+                "text-align": "center"
             }
         });
     </script>
