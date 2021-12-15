@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="utf-8">
+    <meta name="author" content="me">
+    <title>Provsvar anonym</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="assets/css/dataTables.bootstrap.css" rel="stylesheet">
+      
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<!-- container -->
+    
+<nav class="navbar navbar-default navbar-fixed-top"  style="font-family:Roboto; background-color:#fff;">
+  <div class="container">
+  <h2 class="text-center">Patient test data table</h2>
+    <p class="text-center">Sökbar, filtrerbar, användarvänlig tabell för snabb sökning efter patient-ID per datum och relaterad bedömning från P-TSH, P-ASAT, P-ALAT provning.<p>
+  </div>
+</nav>
+    
+    <br><br/>
+    <br>
+    
+<!--<div class="header" id="myHeader">
+  <h2>Patient test data table</h2>
+
+        <p>Searchable, filterable, user-friendly table for quick search for P-TSH , P-ASAT, P-ALAT test results.<br>
+</div>-->
+
+<body>
+    <div class="jumbotron" style="font-family:Roboto; background-color:#fff; min-height:100%; background-size:cover;">
+  <div class="container text-center">
+      <br><br/>
+
+        <h3 style="color:#b5b5b5"></h3>
+
+
+        <div id="table-container"></div>
+  
+    <!--<p></p>-->
+    <p> Source:<i><a href="#"></a></i>
+
+    </div>
+    </div>
+    <!-- /.container -->
+
+<footer id="footer">
+  <ul class="text-center">
+            <p style="color:darkgrey">&copy; 2021 - Prosvar anonym<img src="assets/img/favicon/favicon-16x16.png"> - by <a href="desireyavro.com">desireyavro</a> with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i></p>.
+                <code style="color:#ccc">Inspired by Derek Eder <a href="https://github.com/derekeder/csv-to-html-table">code </a> on github</code>.
+  </ul>
+  </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="assets/scripts/jquery.csv.min.js"></script>
+    <script src="assets/scripts/jquery.dataTables.min.js"></script>
+    <script src="assets/scripts/dataTables.bootstrap.js"></script>
+    <script src="assets/scripts/csv_to_html_table.js"></script>
+            
+    
+    
+
+
+
+    <script>
+        init_table({
+            csv_path: 'assets/data/provsvar_sept_anonym_122021-Blad11_mål.tsv',
+            element: 'table-container',
+            allow_download: true,
+            csv_options: {
+                separator: '\t',
+                delimiter: '"'
+            },
+            datatables_options: {
+                "paging": true,
+                "pagingType": "full_numbers",
+                "text-align": "center"
+            }
+        });
+    </script>
+</body>
+
+</html>
