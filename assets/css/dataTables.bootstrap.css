@@ -1,6 +1,6 @@
 div.dataTables_length label {
 	font-weight: normal;
-	text-align: left;
+	text-align: center; /* left */
 	white-space: nowrap;
 }
 
@@ -10,13 +10,13 @@ div.dataTables_length select {
 }
 
 div.dataTables_filter {
-	text-align: right;
+	text-align: center; /* right */
 }
 
 div.dataTables_filter label {
 	font-weight: normal;
 	white-space: nowrap;
-	text-align: left;
+	text-align: center; /* left */
 }
 
 div.dataTables_filter input {
@@ -33,7 +33,7 @@ div.dataTables_info {
 div.dataTables_paginate {
 	margin: 0;
 	white-space: nowrap;
-	text-align: right;
+	text-align: center; /* right */
 }
 
 div.dataTables_paginate ul.pagination {

@@ -6,7 +6,7 @@ function init_table(options) {
   var allow_download = options.allow_download || false;
   var csv_options = options.csv_options || {};
   var datatables_options = options.datatables_options || {};
-
+    
   $("#" + el).html("<table class='table table-striped table-condensed' id='my-table'></table>");
 
   $.when($.get(csv_path)).then(
@@ -38,5 +38,5 @@ function init_table(options) {
 
       if (allow_download)
         $("#" + el).append("<p><a class='btn btn-info' href='" + csv_path + "'><i class='glyphicon glyphicon-download'></i> Download as CSV</a></p>");
-    });
+    });    
 }
